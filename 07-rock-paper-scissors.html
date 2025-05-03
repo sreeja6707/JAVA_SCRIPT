@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <p>
+      Rock Paper Scissors
+    </p>
+    <button onclick="
+    pG('rock');
+    ">
+      Rock
+    </button>
+    <button onclick="
+    pG('paper');">
+      Paper
+    </button>
+
+    <button onclick="
+     pG('scissors');
+    ">
+      Scissors
+    </button>
+    <script>
+     function pG(pM){
+        const cM=pickcM();
+      
+    let res='';
+    if(pM==='scissors'){
+    if(cM==='rock'){
+      res='You Lose.';
+    }
+    else if(cM==='paper'){
+      res='You win.'
+    }
+    else if(cM==='scissors'){
+      res='Tie.'
+    }
+  }else if(pM==='paper'){
+    if(cM==='rock'){
+      res='You win.';
+    }
+    else if(cM==='paper'){
+      res='Tie..'
+    }
+    else if(cM==='scissors'){
+      res='You Lose.'
+    }
+  }
+  else if(pM==='rock'){
+    if(cM==='rock'){
+      res='Tie.';
+    }
+    else if(cM==='paper'){
+      res='You Lose.'
+    }
+    else if(cM==='scissors'){
+      res='You win.'
+    }
+  }
+    alert(`You picked ${pM}.Computer picked ${cM}. ${res}.`);
+  }
+      function pickcM(){
+        const ranNum=Math.random();
+    
+        let cM='';
+
+      if(ranNum>=0 && ranNum<1/3){
+        cM='rock';
+      }
+      else if(ranNum>=1/3 && ranNum<2/3){
+        cM='paper';
+      }
+      else if(ranNum>=2/3 && ranNum<1){
+        cM='scissors';
+      }
+      return cM;
+        }
+    </script>
+  </body>
+</html>

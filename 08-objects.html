@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <script>
+      const prod={
+        name:'socks',
+        price:1090,
+        ['delivery-time']:'1 day',
+        fun: function fun1(){
+          console.log('fun');
+        }
+      };
+      console.log(prod.name);//dot notation
+      prod.newProperty=true;
+      delete prod.newProperty;
+      console.log(prod['name']);//bracket notation
+      prod.fun();
+      console.log('hello'.toUpperCase());
+      console.log('hello'.length());//auto-boxing will not work with null and undefined
+
+      const ob1={
+        message:'hello'//reference
+      };
+      const ob2= ob1;
+
+      ob1.message='good';
+    </script>
+  </body>
+</html>
